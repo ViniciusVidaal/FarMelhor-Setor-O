@@ -42,6 +42,7 @@ AOS.init({
 const bannerSwiper = new Swiper(".banner-swiper", {
   loop: true,
   speed: 800,
+  autoHeight: true,
   allowTouchMove: false,
   autoplay: {
     delay: 3500,
