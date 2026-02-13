@@ -74,3 +74,17 @@ const swiper = new Swiper(".testimonials-swiper", {
     },
   },
 });
+
+const trackWhatsAppConversion = () => {
+  if (typeof window.gtag !== "function") return;
+  window.gtag("event", "conversion", {
+    send_to: "AW-17942264502/gBl7CPmTl_gbELb1xOtC",
+    value: 0.0,
+    currency: "BRL",
+  });
+};
+
+const whatsappLinks = document.querySelectorAll('a[href*="wa.me/"]');
+whatsappLinks.forEach((link) => {
+  link.addEventListener("click", trackWhatsAppConversion);
+});
